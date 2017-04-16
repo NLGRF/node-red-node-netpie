@@ -1,23 +1,41 @@
 {
   "netpie": {
+    "common": {},
     "status": {
-      "connecting": "Connecting",
-      "fail": "Failed",
-      "disconnect": "Disconnected"
+      "connecting": "connecting",
+      "fail": "failed",
+      "connected": "connected",
+      "disconnect": "disconnected"
     },
     "label": {
-      "appKey": "App Key",
-      "appId": "App Id",
-      "gearName": "Gear Name",
-      "appSecret": "App Secret",
-      "targetGearName": "Target Gear"
+      "common": {
+        "appKey": "App Key",
+        "appId": "App Id",
+        "appSecret": "App Secret"
+      },
+      "in": {
+        "gearName": "Gear Name",
+        "targetGearName": "Target Gear"
+      },
+      "out": {
+        "gearName": "Gear Name",
+        "targetGearName": "Target Gear"
+      }
     },
     "placeholder": {
-      "appKey": "App Key",
-      "appId": "App Id",
-      "gearName": "Gear Name",
-      "appSecret": "App Secret",
-      "targetGearName": "Target Gear Name"
+      "common": {
+        "appKey": "App Key",
+        "appId": "App Id",
+        "appSecret": "App Secret"
+      },
+      "in": {
+        "gearName": "Gear Name",
+        "targetGearName": "in-comming message from gearname"
+      },
+      "out": {
+        "gearName": "Gear Name",
+        "targetGearName": "target gearname that you want to send"
+      }
     }
   }
 }
