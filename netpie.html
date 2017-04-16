@@ -30,7 +30,6 @@
         <label for="node-input-gearName"><i class="fa fa-tasks"></i> <span data-i18n="netpie.label.gearName">gearName</span></label>
         <input type="text" id="node-input-gearName" data-i18n="[placeholder]netpie.label.gearName">
     </div>
-
 </script>
 
 <script type="text/x-red" data-template-name="netpie-out">
@@ -59,63 +58,64 @@
     </div>
     <div class="form-tips"><span data-i18n="netpie.tip">Tip: Leave target blank if you want to set them via msg properties.</span></div>
 
+
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('netpie-in', {
-        category: 'input',
-        defaults: {
-            appId: {value: ""},
-            appKey: {value: ""},
-            appSecret: {value: ""},
-            name: {value: ""},
-            gearName: {value: ""}
-        },
-        color: "#FFAAAA",
-        inputs: 0,
-        outputs: 1,
-        icon: "bridge.png",
-        label: function () {
-            return this.gearName + " | " + (this.name || this.appKey || "netpie in");
-        },
+  RED.nodes.registerType('netpie-in', {
+    category: 'input',
+    defaults: {
+      appId: {value: ""},
+      appKey: {value: ""},
+      appSecret: {value: ""},
+      name: {value: ""},
+      gearName: {value: ""}
+    },
+    color: "#FFAAAA",
+    inputs: 0,
+    outputs: 1,
+    icon: "bridge.png",
+    label: function () {
+      return this.gearName + " | " + (this.name || this.appKey || "netpie in");
+    },
 
-        labelStyle: function () {
-            return this.name ? "node_label_italic" : "";
-        },
+    labelStyle: function () {
+      return this.name ? "node_label_italic" : "";
+    },
 
-        oneditprepare: function () {
-            console.log("ON EDIT PREPARE");
-        }
-    });
+    oneditprepare: function () {
+      console.log("ON EDIT PREPARE");
+    }
+  });
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('netpie-out', {
-        category: 'output',
-        defaults: {
-            appId: {value: ""},
-            appKey: {value: ""},
-            appSecret: {value: ""},
-            name: {value: ""},
-            gearName: {value: "outgear"},
-            targetGearName: {value: ""}
-        },
-        color: "#FFAAAA",
-        inputs: 1,
-        outputs: 0,
-        icon: "bridge.png",
-        label: function () {
-            return this.targetGearName + " | " + (this.name || this.appKey || "netpie out");
-        },
+  RED.nodes.registerType('netpie-out', {
+    category: 'output',
+    defaults: {
+      appId: {value: ""},
+      appKey: {value: ""},
+      appSecret: {value: ""},
+      name: {value: ""},
+      gearName: {value: "outgear"},
+      targetGearName: {value: ""}
+    },
+    color: "#FFAAAA",
+    inputs: 1,
+    outputs: 0,
+    icon: "bridge.png",
+    label: function () {
+      return this.targetGearName + " | " + (this.name || this.appKey || "netpie out");
+    },
 
-        labelStyle: function () {
-            return this.name ? "node_label_italic" : "";
-        },
+    labelStyle: function () {
+      return this.name ? "node_label_italic" : "";
+    },
 
-        oneditprepare: function () {
-            console.log("ON EDIT PREPARE");
-        }
-    });
+    oneditprepare: function () {
+      console.log("ON EDIT PREPARE");
+    }
+  });
 </script>
 
 <script type="text/x-red" data-help-name="netpie out">
@@ -128,5 +128,6 @@
     <p>Likewise the QoS and retain values can be configured in the node or, if left
        blank, set by <code>msg.qos</code> and <code>msg.retain</code> respectively.
        By default, messages are published at QoS 0 with the retain flag set to false.</p>
+
 
 </script>
