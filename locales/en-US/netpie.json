@@ -1,14 +1,23 @@
 {
   "netpie": {
-	  "status": {
+    "status": {
       "connecting": "Connecting",
       "fail": "Failed",
-      "disconnect": "Disconnected", 
+      "disconnect": "Disconnected"
     },
     "label": {
       "appKey": "App Key",
       "appId": "App Id",
+      "gearName": "Gear Name",
       "appSecret": "App Secret",
+      "targetGearName": "Target Gear"
+    },
+    "placeholder": {
+      "appKey": "App Key",
+      "appId": "App Id",
+      "gearName": "Gear Name",
+      "appSecret": "App Secret",
+      "targetGearName": "Target Gear Name"
     }
   }
 }
